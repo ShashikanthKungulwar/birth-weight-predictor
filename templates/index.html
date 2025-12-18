@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth Weight Form</title>
+
+    <style>
+
+        body {
+            background: #e8f2ff; /* light blue background */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 350px;
+            margin: 80px auto;  /* center + top margin */
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #004a99;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            color: #003d80;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #80aee6;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background-color: #004a99;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Birth Weight Form</h1>
+
+    <form action="/predict" method="post">
+
+        <label>Gestation</label>
+        <input name="gestation" type="number" required />
+
+        <label>Parity</label>
+        <input name="parity" type="number" required />
+
+        <label>Age</label>
+        <input name="age" type="number" required />
+
+        <label>Height</label>
+        <input name="height" type="number" required />
+
+        <label>Weight</label>
+        <input name="weight" type="number" required />
+
+        <label>Smoke</label>
+        <input name="smoke" type="number" required />
+
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Here is your result: {{bwt}}</h2>
+    </div>
+
+</body>
+</html>
