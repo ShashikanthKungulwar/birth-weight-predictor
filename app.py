@@ -30,7 +30,7 @@ def predict():
     baby_df=pd.DataFrame(baby_data)
     # return " yooo"
     print(baby_df)
-    with open("model/model.pkl","rb") as f:
+    with open("model.pkl","rb") as f:
         mymodel=pickle.load(f)
         
     predicted_data=mymodel.predict(baby_df)
